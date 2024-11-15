@@ -1,0 +1,85 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 800px;
+    height: 450px;
+    margin: 50px auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.montantFacture, .paiementClient {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.demande__Facture, .montantPayer{
+    margin-left: 20px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btnRendreMonaie {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    background-color: royalblue;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+}
+
+.rendreMonaie {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+}
+
+.billet10e, .billet5e, .piece1e {
+    height: 140px;
+    padding: 10px;
+}
+
+.monnaie-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.monnaie-container img {
+    width: auto; 
+    height: 140px;
+}
+
+.monnaie-quantite {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: red; 
+}

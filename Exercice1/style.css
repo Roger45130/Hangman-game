@@ -1,0 +1,38 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 550px;
+    height: 270px;
+    margin: 50px auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.formulaire, .responseIRS {
+    padding: 0 20px 20px 20px;
+}
+
+.sex__person__select, .age__person__response, .responseIRSmessage {
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.age__person__response{
+    width: 50px;
+}
+
+.responseIRSmessage {
+    width: 230px;
+}

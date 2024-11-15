@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 8</title>
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <img src="Assets/Logo/ThePriceIsRigth.png" alt="Logo du Jeu 'The Price Is Right'" class="LogoDePriceIsRight">
+        </header>
+        <div class="entete">
+            <h1 class="title__h1">BIENVENUE SUR THE PRICE IS RIGHT <i class="fa-brands fa-shopify"></i></h1>
+        </div>
+        <div class="objetArticle"></div><br><br><br>
+        <div class="descriptionArticle"></div><br><br>
+        <form action="" class="form__prixProposer">
+            <label for="demander__prixProposer">Quel prix proposez-vous pour cette article : </label>
+            <input type="number" name="input__prixProposer" id="input__prixProposer" class="prixProposer">
+        </form>
+        <button type="submit" class="btnValiderPrix" onclick="valider(this)";>VALIDER LE PRIX</button>
+        <div class="reponsePriceIsRight"></div><br>
+        <span class="information"><u>Information sur le jeu "The Price Is Right" :</u>
+            <p class="indication">Vous avez <b><u>uniquement 10 tentatives</u></b> pour trouver le price exacte de l'objet que nous vous présentons.</p>
+            <p class="indication">Les prix sont compris entre 1 €uros et 100 €uros.</p>
+            <p class="indication">Dans ce jeu, il y a <b><u>5 acticles qui s'affiche de façon aléatoire</u></b>.</p>
+            <p class="indication">Le même article <b><u>peut s'afficher 2 fois, mais attention sont prix ne sera pas le même</u></b>.</p>
+            <p class="indication">Nous vous souhaitons une agréable partie avec le jeu "<b>The Price Is Right</b>".</p>
+        </span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.20rem;
+    text-align: center;
+}
+
+.form__motDePasse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.motDePasse {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+
+.btnVefifierMdP {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    background-color: royalblue;
+    font-weight: bold;
+    color: #fff;
+    padding: 15px;
+}
+
+.reponseVerifierMdP {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 20px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.information {
+    margin: 20px;
+    font-weight: bold;
+}
+
+p {
+    margin-left: 30px;
+}
+
+.rouge {
+    color: red;
+    font-size: 12px;
+}
+
+.orange {
+    color: orangered;
+    font-size: 12px;
+}
+
+.vert {
+    color: green;
+    font-size: 12px;
+}
+
+.bleu {
+    color: royalblue;
+    font-size: 12px;
+}

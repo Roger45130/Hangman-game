@@ -1,0 +1,120 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.LogoDePriceIsRight {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 1000px;
+    height: 1280px;
+    margin: 50px auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.20rem;
+    text-align: center;
+}
+
+.objetArticle {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30%;
+}
+
+.descriptionArticle {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.form__prixProposer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.prixProposer {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    padding: 8px;
+}
+
+.btnValiderPrix {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    background-color: royalblue;
+    font-weight: bold;
+    color: #fff;
+    padding: 15px;
+}
+
+.reponsePriceIsRight {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.information {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.indication {
+    margin-left: 30px;
+    font-size: 13px;
+}
+
+.indication b {
+    color: red;
+}
+
+.fa-shopify{
+    color: royalblue;
+}
+
+.fa-check {
+    color: rgb(69, 206, 69);
+}
+
+.fa-face-sad-tear {
+    color: red;
+}

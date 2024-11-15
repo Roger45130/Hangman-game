@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 6</title>
+</head>
+<body>
+    <div class="container">
+        <div class="entete">
+            <h1 class="title__h1">BONUS/MALUS ASSURANCE CALCULATOR <i class="fa-solid fa-car-burst"></i></h1>
+        </div>
+        <form action="" class="form__assurance">
+            <label for="demander__ageConducteur">Veuillez saisir l'âge du conducteur : </label>
+            <input type="number" name="input__ageConducteur" id="input__ageConducteur" class="ageConducteur">
+            <label for="demander__anneePermis">Veuillez saisir l'année du permis de conduire : <i>(AAAA)</i></label>
+            <input type="number" name="input__anneePermis" id="input__anneePermis" class="anneePermis">
+            <label for="demander__fidelite">Veuillez saisir la fidélité du client : </label>
+            <input type="number" name="input__fidelite" id="input__fidelite" class="fidelite">
+            <label for="demander__nbrAccident">Veuillez saisir le nombre d'accident : </label>
+            <input type="number" name="input__nbrAccident" id="input__nbrAccident" class="nbrAccident">
+        </form>
+        <button type="submit" class="btnValider" onclick="valider(this)";>VALIDER ETUDE DOSSIER</button>
+        <div class="reponseAssurance"></div><br>
+        <span class="information"><u>Légende de l'assurance :</u>
+            <p class="rouge"><u>Rouge :</u> Tarif Niveau 1 personne - de 2 ans de permis et - de 25 ans.</p>
+            <p class="orange"><u>Orange :</u> Tarif Niveau 2 personne + de 2 ans de permis et - de 25 ans ou personne +2 ans de permis et + de 25 ans.</p>
+            <p class="vert"><u>Vert :</u> Tarif Niveau 3 personne + de 2 ans de permis et + de 25 ans.</p>
+            <p class="bleu"><u>Bleu :</u> Tarif Niveau 4 spéciale "fidélité". Personne avec plus de 1 an assuré dans l'assurance et ayant eu aucun accident responsable.</p>
+            <p class="refus"><i class="fa-solid fa-triangle-exclamation"></i> <u>Refus :</u> Refus de toutes personnes ayant eu au-moins 3 accidents.</p>
+        </span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

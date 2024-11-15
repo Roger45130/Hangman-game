@@ -1,0 +1,101 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.LogoDePriceIsRight {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.container {
+    width: 1440px;
+    height: 930px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.20rem;
+    text-align: center;
+}
+
+.hangmanIcon {
+    width: 100px;
+}
+
+.gridPrincipal {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 1440px;
+    height: 667px;
+    border: 1px solid #000000;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.gridButtonLettre {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000000;
+}
+
+.btnLettreA, .btnLettreB, .btnLettreC, .btnLettreD, .btnLettreE, .btnLettreF, .btnLettreG, .btnLettreH, .btnLettreI, .btnLettreJ, .btnLettreK, .btnLettreL, .btnLettreM, .btnLettreN, .btnLettreO, .btnLettreP, .btnLettreQ, .btnLettreR, .btnLettreS, .btnLettreT, .btnLettreU, .btnLettreV, .btnLettreW, .btnLettreX, .btnLettreY, .btnLettreZ, .btnLettreÂ, .btnLettreÈ, .btnLettreÉ, .btnLettreÎ {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    background-color: royalblue;
+    font-weight: bold;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 7px 6px 25px -6px rgba(0,0,0,0.79);
+    -webkit-box-shadow: 7px 6px 25px -6px rgba(0,0,0,0.79);
+    -moz-box-shadow: 7px 6px 25px -6px rgba(0,0,0,0.79);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.btnLettreA:hover, .btnLettreB:hover, .btnLettreC:hover, .btnLettreD:hover, .btnLettreE:hover,.btnLettreF:hover, .btnLettreG:hover, .btnLettreH:hover, .btnLettreI:hover, .btnLettreJ:hover,.btnLettreK:hover, .btnLettreL:hover, .btnLettreM:hover, .btnLettreN:hover, .btnLettreO:hover,
+.btnLettreP:hover, .btnLettreQ:hover, .btnLettreR:hover, .btnLettreS:hover, .btnLettreT:hover,.btnLettreU:hover, .btnLettreV:hover, .btnLettreW:hover, .btnLettreX:hover, .btnLettreY:hover, .btnLettreZ:hover, .btnLettreÂ:hover, .btnLettreÈ:hover, .btnLettreÉ:hover, .btnLettreÎ:hover {
+    background-color: dodgerblue; 
+    transform: scale(1.3); 
+    box-shadow: 10px 8px 30px -5px rgba(0,0,0,0.9); 
+}
+
+.gridSecondaire {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid #000000;
+    height: 464px;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.imagePendu {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+}
+
+.trouverMot {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="entete">
+            <h1 class="title__h1">QUEL HEURE DANS UNE SECONDE <i class="fa-regular fa-clock"></i></h1>
+        </div>
+        <div class="indique__heure">
+            <label for="demander__heure">Veuillez Indiqué le chiffre de l'heure(s) : </label>
+            <input type="number" name="demande__heure" id="demande__heure" class="demande__heures">
+        </div>
+        <div class="indique__minute">
+            <label for="demander__minute">Veuillez Indiqué le chiffre de minute(s) : </label>
+            <input type="number" name="demande__minute" id="demande__minute" class="demande__minutes">    
+        </div>
+        <div class="indique__seconde">
+            <label for="demander__seconde">Veuillez Indiqué le chiffre des seconde(s) : </label>
+            <input type="number" name="demande__seconde" id="demande__seconde" class="demande__secondes">
+        </div>
+        <span class="indication">Dans une seconde, il sera ...</span>
+        <button type="submit" class="btnNouvHeure" onclick="nouvelleHeure(this)";>AFFICHER</button>
+        <div class="AfficheNvHeure"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

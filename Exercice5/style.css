@@ -1,0 +1,46 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 800px;
+    height: 170px;
+    margin: 50px auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.20rem;
+    text-align: center;
+}
+
+.form__email {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inscrireEmail {
+    margin-left: 10px;
+    width: 300px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.verification {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    font-weight: bold;
+}

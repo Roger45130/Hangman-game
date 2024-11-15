@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 4</title>
+</head>
+<body>
+    <div class="container">
+        <div class="entete">
+            <h1 class="title__h1">RENDRE LA MONAIE <i class="fa-solid fa-money-bill-transfer"></i></h1>
+        </div>
+        <div class="montantFacture">
+            <label for="demander__Facture">Veuillez Indiqué le montant total à payer : </label>
+            <input type="number" name="demande__montantFacture" id="demande__montantFacture" class="demande__Facture">
+        </div>
+        <div class="paiementClient">
+            <label for="demander__heure">Veuillez Indiqué le montant donné par le client : </label>
+            <input type="number" name="demande__montantPayer" id="demande__montantPayer" class="montantPayer">
+        </div>
+        <button type="submit" class="btnRendreMonaie" onclick="rendMonaie(this)";>RENDRE LA MONAIE</button>
+        <div class="rendreMonaie">
+            <img src="asset/image/billet10euros.png" alt="Billet de 10 euros" class="billet10e">
+            <img src="asset/image/billet5euros.png" alt="billet de 5 euros" class="billet5e">
+            <img src="asset/image/piece1euro.png" alt="pièce de 1 euro" class="piece1e">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

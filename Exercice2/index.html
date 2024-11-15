@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 2</title>
+</head>
+<body>
+    <div class="container">
+        <div class="entete">
+            <h1 class="title__h1">PHOTOCOPIE A LA DEMANDE <i class="fa-regular fa-copy"></i></h1>
+        </div>
+        <div class="nbres__photocopies">
+            <label for="nbres__photocopies__demander">Veuillez Indiqué le nombres de phocopie que vous souhaitez : </label>
+            <input type="number" name="nombres__photocopie" id="nombres__photocopie" class="nb__photocopie">
+            <br><br>
+            <span class="span__nb__photocopie"><i class="fa-solid fa-triangle-exclamation"></i> Nous vous rappelons que le tarif est calculé de la manière suivante : <br>
+            Les 10 premières phocopies : 0.10 € par page.<br>
+            Les 20 photocopies suivantes : 0.09 € par page. <br>
+            Les photocopies suivantes : 0.08 € par page.</span>
+        </div>
+        <button type="submit" class="calcul" onclick="calcul(this)";>CALCULER LE MONTANT A PAYER</button>
+        <div class="payer__montant">
+            <h2 class="subtitle__h2">Voici le montant que vous devrez payer : </h2>
+            <div class="payer__montant">
+                <input type="text" name="montant__payer" id="montant__payer" class="reste__payer">
+                <span class="euro-symbol">€</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

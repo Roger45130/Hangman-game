@@ -1,0 +1,67 @@
+@import url(../../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 750px;
+    height: 370px;
+    margin: 50px auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.entete {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.indique__heure, .indique__minute, .indique__seconde{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.demande__heures, .demande__minutes, .demande__secondes {
+    margin-left: 10px;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.indication {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btnNouvHeure {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    background-color: royalblue;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+}
+
+.AfficheNvHeure {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    font-weight: bold;
+}

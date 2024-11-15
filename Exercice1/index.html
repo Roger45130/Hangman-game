@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="entete">
+            <h1 class="title__h1">Impôt <i class="fa-solid fa-hand-holding-dollar"></i></h1>
+        </div>
+        <div class="formulaire">
+            <label for="sex_person" class="sex__person">Indiqué votre genre : </label>
+            <select name="genre" id="sex__person" class="sex__person__select">
+                <option value=""> -- Type de genre -- </option>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+            </select>
+            <br><br>
+            <label for="age__person" class="age__person">Quel est votre âges : </label>
+            <input type="text" name="age__person" id="age__person" class="age__person__response">
+        </div>
+        <div class="responseIRS">
+            <label for="responseIRS" class="responseIRSdemande">Voici le renseignement demander : </label>
+            <input type="text" name="responseIRSmessage" id="responseIRSmessage" class="responseIRSmessage">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

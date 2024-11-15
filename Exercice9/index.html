@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 9</title>
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <img src="Assets/Logo/HangManGameLogo.png" alt="Logo du Jeu 'Hangman Game'" class="HangManGameLogo">
+        </header>
+        <div class="entete">
+            <h1 class="title__h1">BIENVENUE SUR THE HANGMAN GAME <img src="Assets/Images/hangman.png" alt="icon Hangman" class="hangmanIcon"></h1>
+        </div>
+        <div class="gridPrincipal">
+            <div class="gridButtonLettre">
+                <button type="submit" class="btnLettreA" onclick="valider(this)";>A</button>
+                <button type="submit" class="btnLettreB" onclick="valider(this)";>B</button>
+                <button type="submit" class="btnLettreC" onclick="valider(this)";>C</button>
+                <button type="submit" class="btnLettreD" onclick="valider(this)";>D</button>
+                <button type="submit" class="btnLettreE" onclick="valider(this)";>E</button>
+                <button type="submit" class="btnLettreF" onclick="valider(this)";>F</button>
+                <button type="submit" class="btnLettreG" onclick="valider(this)";>G</button>
+                <button type="submit" class="btnLettreH" onclick="valider(this)";>H</button>
+                <button type="submit" class="btnLettreI" onclick="valider(this)";>I</button>
+                <button type="submit" class="btnLettreJ" onclick="valider(this)";>J</button>
+                <button type="submit" class="btnLettreK" onclick="valider(this)";>K</button>
+                <button type="submit" class="btnLettreL" onclick="valider(this)";>L</button>
+                <button type="submit" class="btnLettreM" onclick="valider(this)";>M</button>
+                <button type="submit" class="btnLettreN" onclick="valider(this)";>N</button>
+                <button type="submit" class="btnLettreO" onclick="valider(this)";>O</button>
+                <button type="submit" class="btnLettreP" onclick="valider(this)";>P</button>
+                <button type="submit" class="btnLettreQ" onclick="valider(this)";>Q</button>
+                <button type="submit" class="btnLettreR" onclick="valider(this)";>R</button>
+                <button type="submit" class="btnLettreS" onclick="valider(this)";>S</button>
+                <button type="submit" class="btnLettreT" onclick="valider(this)";>T</button>
+                <button type="submit" class="btnLettreU" onclick="valider(this)";>U</button>
+                <button type="submit" class="btnLettreV" onclick="valider(this)";>V</button>
+                <button type="submit" class="btnLettreW" onclick="valider(this)";>W</button>
+                <button type="submit" class="btnLettreX" onclick="valider(this)";>X</button>
+                <button type="submit" class="btnLettreY" onclick="valider(this)";>Y</button>
+                <button type="submit" class="btnLettreZ" onclick="valider(this)";>Z</button>
+                <button type="submit" class="btnLettreÂ" onclick="valider(this)";>Â</button>
+                <button type="submit" class="btnLettreÈ" onclick="valider(this)";>È</button>
+                <button type="submit" class="btnLettreÉ" onclick="valider(this)";>É</button>
+                <button type="submit" class="btnLettreÎ" onclick="valider(this)";>Î</button>
+            </div>
+            <div class="gridSecondaire">
+                <div class="imagePendu"></div>
+                <div class="trouverMot"></div>
+                <div class="lettreUtiliser">
+                    <p class="indication">Voici les lettre que vous avez déjà utiliser :</p>
+                    <p class="utiliser"></p>
+                </div>
+                <div class="resultatPendu">
+                    <p class="indication">Voici le mot que vous deviez ou vous avez trouver :</p>
+                    <p class="motTrouver"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
