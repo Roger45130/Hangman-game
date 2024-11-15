@@ -95,4 +95,6 @@ function valider(button) {
     }
 }
 
-choisirMot();
+window.onload = () => {
+    choisirMot();
+};
