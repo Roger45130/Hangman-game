@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TP JAVASCRIPT DU 13/11/2024 | EXERCICE 10</title>
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <img src="Assets/Logo/logoMasterMind.png" alt="Logo du Jeu 'MasterMind'" class="MasterMindLogo">
+        </header>
+
+        <div class="gridGeneral">
+            <div class="gridCombinaison">
+                <div class="gridCombinaisonSecrete">
+                    <div class="CombinaisonSecrete"></div>
+                </div>
+            </div>
+
+            <div class="zoneJeu">
+                <div class="gridZoneVerification"></div>
+                <div class="gridZoneTentative"></div>
+            </div>
+        </div>
+
+        <div class="paletteCouleur">
+            <button type="button" class="couleur rouge red"></button>
+            <button type="button" class="couleur vert green"></button>
+            <button type="button" class="couleur jaune yellow"></button>
+            <button type="button" class="couleur bleu blue"></button>
+            <button type="button" class="couleur orange"></button>
+            <button type="button" class="couleur pourpre purple"></button>
+        </div>
+
+        <div class="tentativeRestant"></div>
+        <div class="messageVictoireDefaite"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@import url(reset.css);
+
+html, body {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 850px;
+    height: 920px;
+    margin: 0 auto;
+    border: 2px solid #000;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.MasterMindLogo {
+    display: inline-block;
+    width: 200px;
+}
+
+.gridGeneral {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 700px;
+    margin: 1rem auto;
+    border: 2px solid #000;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.gridCombinaisonSecrete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    border-bottom: 2px solid #000;
+}
+
+.CombinaisonSecrete {
+    display: flex;
+    gap: 10px;
+    visibility: hidden;
+}
+
+.zoneJeu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    height: 600px;
+}
+
+.gridZoneVerification, .gridZoneTentative {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 0.75rem;
+    background-color: #fafafa;
+}
+
+.tentative-actuelle {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultat-actuelle {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.paletteCouleur {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.couleur {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.couleur:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.rouge { 
+    background-color: red; 
+}
+
+.vert { 
+    background-color: green; 
+}
+
+.jaune { 
+    background-color: gold; 
+}
+
+.bleu { 
+    background-color: royalblue; 
+}
+
+.orange { 
+    background-color: orange; 
+}
+
+.pourpre { 
+    background-color: purple; 
+}
+
+.bienPlacer, .malPlacer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.bienPlacer {
+    background-color: white;
+    /* margin-bottom: 1rem; */
+}
+
+.malPlacer {
+    background-color: gray;
+    /* margin-bottom: 1rem;*/
+} 
+
+.tentativeRestant {
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.messageVictoireDefaite {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
