@@ -22,7 +22,7 @@ header {
 
 .MasterMindLogo {
     display: inline-block;
-    width: 200px;
+    width: 240px;
 }
 
 .gridGeneral {
@@ -146,7 +146,7 @@ header {
     background-color: gray;
 }
 
-.malPlacer {
+.pasPlacer {
     background-color: black;
 }
 
