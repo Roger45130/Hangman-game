@@ -107,19 +107,19 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.rouge { 
+.red { 
     background-color: red; 
 }
 
-.vert { 
+.green { 
     background-color: green; 
 }
 
-.jaune { 
+.yellow { 
     background-color: gold; 
 }
 
-.bleu { 
+.blue { 
     background-color: royalblue; 
 }
 
@@ -127,11 +127,11 @@ header {
     background-color: orange; 
 }
 
-.pourpre { 
+.purple { 
     background-color: purple; 
 }
 
-.bienPlacer, .malPlacer {
+.bienPlacer, .malPlacer, .pasPlacer {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -140,13 +140,15 @@ header {
 
 .bienPlacer {
     background-color: white;
-    /* margin-bottom: 1rem; */
 }
 
 .malPlacer {
     background-color: gray;
-    /* margin-bottom: 1rem;*/
-} 
+}
+
+.malPlacer {
+    background-color: black;
+}
 
 .tentativeRestant {
     margin: 10px 0;
