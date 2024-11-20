@@ -5,17 +5,17 @@ html, body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.LogoDePriceIsRight {
+.HangManGameLogo {
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 20%;
 }
 
 .container {
     width: 1440px;
-    height: 930px;
+    height: 940px;
     margin: 0 auto;
     border: 1px solid #000000;
     border-radius: 0.75rem;
@@ -34,7 +34,7 @@ html, body {
     display: grid;
     grid-template-rows: 1fr;
     width: 1440px;
-    height: 667px;
+    height: 637px;
     border: 1px solid #000000;
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
@@ -82,7 +82,7 @@ html, body {
     align-items: center;
     justify-items: center;
     border: 1px solid #000000;
-    height: 464px;
+    height: 433px;
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
 }
