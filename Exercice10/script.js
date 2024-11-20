@@ -12,7 +12,7 @@ console.log("Couleurs disponibles :", couleurs); // Affiche les couleurs disponi
 // Fonction pour générer une combinaison secrète de 4 couleurs aléatoires
 function genererCombinaison() {
     combinaisonSecrete = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
         const randomIndex = Math.floor(Math.random() * couleurs.length); // Génère un index aléatoire
         combinaisonSecrete.push(couleurs[randomIndex]); // Ajoute une couleur aléatoire à la combinaison
     }
@@ -101,7 +101,7 @@ function verifierChoixUtilisateur() {
     console.log("Affichage des résultats de la vérification :", pionsPlacees);
 
     // Vérification du statut de la partie (gagnée/perdue)
-    if (pionsPlacees.filter((pion) => pion === "bienPlacer").length === 5) {
+    if (pionsPlacees.filter((pion) => pion === "bienPlacer").length === 4) {
         finDePartie(true); // Victoire
     } else if (nombreEssais === maxEssais) {
         finDePartie(false); // Défaite
@@ -159,12 +159,12 @@ function initPaletteCouleur() {
             const couleurChoisie = event.target.classList[1]; // Récupère la couleur cliquée
             console.log("Couleur choisie :", couleurChoisie);
 
-            if (tentative.length < 5) {
+            if (tentative.length < 4) {
                 tentative.push(couleurChoisie); // Ajoute la couleur à la tentative
                 console.log("Ajout de la couleur à la tentative :", tentative);
             }
 
-            if (tentative.length === 5) {
+            if (tentative.length === 4) {
                 nombreEssais++; // Incrémente le compteur d'essais
                 afficherTentativesRestantes();
                 afficherTentative(); // Affiche la tentative dans le tableau
