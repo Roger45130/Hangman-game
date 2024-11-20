@@ -120,7 +120,7 @@ header {
 }
 
 .blue { 
-    background-color: royalblue; 
+    background-color: blue; 
 }
 
 .orange { 
@@ -133,6 +133,18 @@ header {
 
 .brown {
     background-color: brown; 
+}
+
+.coral {
+    background-color: coral;
+}
+
+.crimson {
+    background-color: crimson;
+}
+
+.darkmagenta {
+    background-color: darkmagenta;
 }
 
 .bienPlacer, .malPlacer, .pasPlacer {

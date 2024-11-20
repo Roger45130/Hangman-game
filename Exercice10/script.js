@@ -1,5 +1,5 @@
 // Liste des couleurs possibles pour le jeu
-const couleurs = ["red", "green", "yellow", "blue", "orange", "purple", "brown"];
+const couleurs = ["red", "green", "yellow", "blue", "orange", "purple", "brown", "coral", "crimson"];
 
 // Variables globales pour stocker la combinaison secrète, la tentative actuelle et le nombre d'essais
 let combinaisonSecrete = []; // Stocke la combinaison générée aléatoirement
