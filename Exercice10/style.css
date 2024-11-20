@@ -131,6 +131,10 @@ header {
     background-color: purple; 
 }
 
+.brown {
+    background-color: brown; 
+}
+
 .bienPlacer, .malPlacer, .pasPlacer {
     width: 30px;
     height: 30px;

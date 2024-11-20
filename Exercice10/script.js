@@ -1,13 +1,13 @@
 // Liste des couleurs possibles pour le jeu
-const couleurs = ["red", "green", "yellow", "blue", "orange", "purple"];
+const couleurs = ["red", "green", "yellow", "blue", "orange", "purple", "brown"];
 
 // Variables globales pour stocker la combinaison secrète, la tentative actuelle et le nombre d'essais
 let combinaisonSecrete = []; // Stocke la combinaison générée aléatoirement
-let tentative = []; // Stocke la tentative actuelle de l'utilisateur
+let tentative = []; // Stocke les choix de couleurs de l'utilisateur
 let nombreEssais = 0; // Compte le nombre d'essais réalisés
 const maxEssais = 12; // Nombre maximum d'essais autorisés
 
-console.log(`${couleurs}`); // Affiche les couleurs disponibles pour debug
+console.log("Couleurs disponibles :", couleurs); // Affiche les couleurs disponibles
 
 // Fonction pour générer une combinaison secrète de 4 couleurs aléatoires
 function genererCombinaison() {
@@ -17,7 +17,7 @@ function genererCombinaison() {
         combinaisonSecrete.push(couleurs[randomIndex]); // Ajoute une couleur aléatoire à la combinaison
     }
     afficherCombinaisonSecrete();
-    console.log('Génère une combinaison secrète.');
+    console.log("Combinaison secrète générée :", combinaisonSecrete); // Affiche la combinaison secrète
 }
 
 // Fonction pour afficher la combinaison secrète (initialement cachée)
@@ -30,21 +30,23 @@ function afficherCombinaisonSecrete() {
         combinaisonDiv.appendChild(pion); // Ajoute le pion à la combinaison secrète
     });
     combinaisonDiv.style.visibility = "hidden"; // Cache la combinaison au début
+    console.log("Affichage de la combinaison secrète masquée."); // Affiche que la combinaison secrète est masquer
 }
 
 // Fonction pour afficher le nombre de tentatives restantes
 function afficherTentativesRestantes() {
     const tentativeRestantDiv = document.querySelector(".tentativeRestant");
     tentativeRestantDiv.textContent = `Tentatives restantes : ${maxEssais - nombreEssais}`;
+    console.log("Tentatives restantes :", maxEssais - nombreEssais); // Affiche le nombre de tentative restante
 }
 
-// Fonction pour afficher les couleurs choisies par l'utilisateur dans la zone des tentatives
+// Fonction pour afficher les choix de l'utilisateur dans la zone des tentatives
 function afficherTentative() {
     const tableauJeu = document.querySelector(".gridZoneTentative");
     const ligneTentative = document.createElement("div");
     ligneTentative.classList.add("tentative-actuelle");
 
-    // Ajouter chaque couleur sélectionnée à la ligne
+    // Ajouter chaque couleur choisie à la ligne
     tentative.forEach((couleur) => {
         const pion = document.createElement("div");
         pion.classList.add("couleur", couleur); // Applique le style à chaque pion
@@ -52,80 +54,57 @@ function afficherTentative() {
     });
 
     tableauJeu.appendChild(ligneTentative); // Ajoute la ligne au tableau de jeu
+    console.log("Affichage de la tentative utilisateur :", tentative); // Affiche le nombre de fois que l'utilisateur a sélectionner une couleur
 }
 
-// Fonction pour afficher les résultats de la vérification (bien placé, mal placé, pas placé)
-function afficherVerification(bienPlacer, malPlacer, pasPlacer) {
+// Fonction pour effectuer le contrôle détaillé des pions
+function verifierChoixUtilisateur() {
     const verificationZone = document.querySelector(".gridZoneVerification");
     const ligneVerification = document.createElement("div");
     ligneVerification.classList.add("resultat-actuelle");
 
-    // Ajoute les pions correspondant aux couleurs bien placées
-    for (let i = 0; i < bienPlacer; i++) {
-        const pion = document.createElement("div");
-        pion.classList.add("bienPlacer");
-        ligneVerification.appendChild(pion);
-    }
-
-    // Ajoute les pions correspondant aux couleurs mal placées
-    for (let i = 0; i < malPlacer; i++) {
-        const pion = document.createElement("div");
-        pion.classList.add("malPlacer");
-        ligneVerification.appendChild(pion);
-    }
-
-    // Ajoute les pions correspondant aux couleurs non présentes dans la combinaison
-    for (let i = 0; i < pasPlacer; i++) {
-        const pion = document.createElement("div");
-        pion.classList.add("pasPlacer");
-        ligneVerification.appendChild(pion);
-    }
-
-    verificationZone.appendChild(ligneVerification); // Ajoute la ligne à la zone de vérification
-}
-
-// Fonction pour vérifier si la tentative correspond à la combinaison secrète
-function verifierCombinaison() {
-    let bienPlacer = 0; // Nombre de pions bien placés
-    let malPlacer = 0; // Nombre de pions mal placés
-    let pasPlacer = 0; // Nombre de pions non correspondants
-
     const copieCombinaisonSecrete = [...combinaisonSecrete]; // Copie de la combinaison pour manipulation
-    const copieTentative = [...tentative]; // Copie de la tentative pour manipulation
+    let pionsPlacees = []; // Liste des pions placés (bien/mal/pas)
 
-    // Vérification des pions bien placés
-    for (let i = 0; i < 4; i++) {
-        if (copieTentative[i] === copieCombinaisonSecrete[i]) {
-            bienPlacer++; // La couleur et la position sont identiques
-            copieCombinaisonSecrete[i] = null; // Retire l'élément vérifié
-            copieTentative[i] = null; // Retire l'élément vérifié
-        }
-    }
+    console.log("Début de la vérification de la tentative :", tentative);
 
-    // Vérification des pions mal placés et pas placés
-    for (let i = 0; i < 4; i++) {
-        if (copieTentative[i] !== null) { // Si la couleur n'a pas encore été vérifiée
-            const index = copieCombinaisonSecrete.indexOf(copieTentative[i]); // Cherche la couleur dans la combinaison secrète
-            if (index !== -1) {
-                malPlacer++; // La couleur existe mais est mal placée
-                copieCombinaisonSecrete[index] = null; // Retire l'élément trouvé
+    // Comparaison des choix de l'utilisateur à la combinaison secrète
+    tentative.forEach((couleurUtilisateur, indexUtilisateur) => {
+        if (copieCombinaisonSecrete[indexUtilisateur] === couleurUtilisateur) {
+            // La couleur est à la bonne position
+            pionsPlacees.push("bienPlacer");
+            copieCombinaisonSecrete[indexUtilisateur] = null; // Marque comme utilisée
+            console.log(`Position ${indexUtilisateur + 1}: Bien placée (${couleurUtilisateur}).`);
+        } else {
+            const autreIndex = copieCombinaisonSecrete.indexOf(couleurUtilisateur);
+            if (autreIndex !== -1) {
+                // La couleur est présente mais mal placée
+                pionsPlacees.push("malPlacer");
+                copieCombinaisonSecrete[autreIndex] = null; // Marque comme utilisée
+                console.log(`Position ${indexUtilisateur + 1}: Mal placée (${couleurUtilisateur}).`);
             } else {
-                pasPlacer++; // La couleur n'existe pas dans la combinaison
+                // La couleur n'existe pas dans la combinaison
+                pionsPlacees.push("pasPlacer");
+                console.log(`Position ${indexUtilisateur + 1}: Pas placée (${couleurUtilisateur}).`);
             }
         }
-    }
+    });
 
-    // Affiche la tentative dans la zone de jeu
-    afficherTentative();
+    // Ajout des pions dans la zone de vérification
+    pionsPlacees.forEach((typePion) => {
+        const pion = document.createElement("div");
+        pion.classList.add(typePion); // Ajoute la classe correspondante
+        ligneVerification.appendChild(pion); // Ajoute le pion dans la ligne
+    });
 
-    // Affiche les résultats dans la zone de vérification
-    afficherVerification(bienPlacer, malPlacer, pasPlacer);
+    verificationZone.appendChild(ligneVerification); // Ajoute la ligne à la zone de vérification
+    console.log("Affichage des résultats de la vérification :", pionsPlacees);
 
-    // Vérifie si la partie est gagnée ou perdue
-    if (bienPlacer === 4) {
-        finDePartie(true); // Partie gagnée
+    // Vérification du statut de la partie (gagnée/perdue)
+    if (pionsPlacees.filter((pion) => pion === "bienPlacer").length === 4) {
+        finDePartie(true); // Victoire
     } else if (nombreEssais === maxEssais) {
-        finDePartie(false); // Partie perdue
+        finDePartie(false); // Défaite
     }
 }
 
@@ -136,11 +115,14 @@ function finDePartie(gagne) {
 
     // Rendre la combinaison secrète visible
     combinaisonDiv.style.visibility = "visible";
+    console.log("Affichage de la combinaison secrète :", combinaisonSecrete);
 
     if (gagne) {
         messageDiv.textContent = `Félicitations ! Vous avez trouvé la combinaison en ${nombreEssais} tentative(s).`;
+        console.log("Victoire de l'utilisateur.");
     } else {
-        messageDiv.textContent = `Dommage ! Vous avez perdu. La combinaison secrète était : ${combinaisonSecrete.join(", ")}`;
+        messageDiv.textContent = `Désolé, vous avez perdu. La combinaison secrète était : ${combinaisonSecrete.join(", ")}.`;
+        console.log("Défaite de l'utilisateur.");
     }
 
     // Proposer une nouvelle partie après une courte pause
@@ -166,6 +148,7 @@ function nouvellePartie() {
 
     genererCombinaison(); // Génère une nouvelle combinaison
     afficherTentativesRestantes(); // Met à jour le nombre de tentatives restantes
+    console.log("Réinitialisation complète du jeu.");
 }
 
 // Fonction pour gérer les clics sur la palette de couleurs
@@ -174,16 +157,20 @@ function initPaletteCouleur() {
     paletteCouleur.addEventListener("click", (event) => {
         if (event.target.classList.contains("couleur")) {
             const couleurChoisie = event.target.classList[1]; // Récupère la couleur cliquée
+            console.log("Couleur choisie :", couleurChoisie);
 
             if (tentative.length < 4) {
                 tentative.push(couleurChoisie); // Ajoute la couleur à la tentative
+                console.log("Ajout de la couleur à la tentative :", tentative);
             }
 
             if (tentative.length === 4) {
                 nombreEssais++; // Incrémente le compteur d'essais
                 afficherTentativesRestantes();
-                verifierCombinaison(); // Vérifie la tentative
-                tentative = []; // Réinitialise la tentative
+                afficherTentative(); // Affiche la tentative dans le tableau
+                verifierChoixUtilisateur(); // Vérifie les choix et place les pions
+                tentative = []; // Réinitialise la tentative pour la prochaine
+                console.log("Fin de la tentative, réinitialisation pour la suivante.");
             }
         }
     });
@@ -194,6 +181,7 @@ function initJeu() {
     genererCombinaison(); // Génère la combinaison secrète
     afficherTentativesRestantes(); // Affiche le nombre d'essais restants
     initPaletteCouleur(); // Active les clics sur la palette
+    console.log("Jeu initialisé."); // Affiche lorsque le jeu a était initialisé
 }
 
 // Démarrage du jeu
