@@ -50,7 +50,7 @@ html, body {
     border: 1px solid #000000;
 }
 
-.btnLettreA, .btnLettreB, .btnLettreC, .btnLettreD, .btnLettreE, .btnLettreF, .btnLettreG, .btnLettreH, .btnLettreI, .btnLettreJ, .btnLettreK, .btnLettreL, .btnLettreM, .btnLettreN, .btnLettreO, .btnLettreP, .btnLettreQ, .btnLettreR, .btnLettreS, .btnLettreT, .btnLettreU, .btnLettreV, .btnLettreW, .btnLettreX, .btnLettreY, .btnLettreZ, .btnLettreÂ, .btnLettreÈ, .btnLettreÉ, .btnLettreÎ {
+.btnLettreA, .btnLettreB, .btnLettreC, .btnLettreD, .btnLettreE, .btnLettreF, .btnLettreG, .btnLettreH, .btnLettreI, .btnLettreJ, .btnLettreK, .btnLettreL, .btnLettreM, .btnLettreN, .btnLettreO, .btnLettreP, .btnLettreQ, .btnLettreR, .btnLettreS, .btnLettreT, .btnLettreU, .btnLettreV, .btnLettreW, .btnLettreX, .btnLettreY, .btnLettreZ, .btnLettreÂ, .btnLettreÈ, .btnLettreÉ, .btnLettreÎ, .btnRejouer {
     display: block;
     position: relative;
     margin-left: auto;
@@ -61,6 +61,7 @@ html, body {
     background-color: royalblue;
     font-weight: bold;
     color: #fff;
+    cursor: pointer;
     padding: 15px;
     box-shadow: 7px 6px 25px -6px rgba(0,0,0,0.79);
     -webkit-box-shadow: 7px 6px 25px -6px rgba(0,0,0,0.79);
@@ -69,7 +70,7 @@ html, body {
 }
 
 .btnLettreA:hover, .btnLettreB:hover, .btnLettreC:hover, .btnLettreD:hover, .btnLettreE:hover,.btnLettreF:hover, .btnLettreG:hover, .btnLettreH:hover, .btnLettreI:hover, .btnLettreJ:hover,.btnLettreK:hover, .btnLettreL:hover, .btnLettreM:hover, .btnLettreN:hover, .btnLettreO:hover,
-.btnLettreP:hover, .btnLettreQ:hover, .btnLettreR:hover, .btnLettreS:hover, .btnLettreT:hover,.btnLettreU:hover, .btnLettreV:hover, .btnLettreW:hover, .btnLettreX:hover, .btnLettreY:hover, .btnLettreZ:hover, .btnLettreÂ:hover, .btnLettreÈ:hover, .btnLettreÉ:hover, .btnLettreÎ:hover {
+.btnLettreP:hover, .btnLettreQ:hover, .btnLettreR:hover, .btnLettreS:hover, .btnLettreT:hover,.btnLettreU:hover, .btnLettreV:hover, .btnLettreW:hover, .btnLettreX:hover, .btnLettreY:hover, .btnLettreZ:hover, .btnLettreÂ:hover, .btnLettreÈ:hover, .btnLettreÉ:hover, .btnLettreÎ:hover, .btnRejouer:hover {
     background-color: dodgerblue; 
     transform: scale(1.3); 
     box-shadow: 10px 8px 30px -5px rgba(0,0,0,0.9); 

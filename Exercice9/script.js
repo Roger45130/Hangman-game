@@ -37,38 +37,40 @@ let erreurs = 0;
 const maxErreurs = 9;
 const lettresUtilisees = [];
 
+// Fonction pour choisir un mot au hasard
 function choisirMot() {
     motADeviner = mots[Math.floor(Math.random() * mots.length)];
     motAffiche = Array(motADeviner.length).fill("_");
     document.querySelector(".trouverMot").innerHTML = motAffiche.join(" ");
 }
 
+// Fonction pour afficher le mot
 function afficherMot() {
     document.querySelector(".trouverMot").innerHTML = motAffiche.join(" ");
 }
 
-function initializeButtons() {
-    const buttons = document.querySelectorAll('.gridButtonLettre button');
-    buttons.forEach(button => {
-        button.innerText = button.innerText.toLowerCase();
-        button.addEventListener('click', () => {
-            button.disabled = true;
-            console.log(`Bouton "${button.innerText}" utilisé et désactivé.`);
-        });
-    });
-}
-
-document.addEventListener('DOMContentLoaded', initializeButtons);
-
+// Fonction pour afficher les lettres utilisées
 function afficherLettresUtilisees() {
     document.querySelector(".utiliser").innerHTML = lettresUtilisees.join(" ; ");
 }
 
+// Fonction pour initialiser les boutons
+function initializeButtons() {
+    const buttons = document.querySelectorAll('.gridButtonLettre button');
+    buttons.forEach(button => {
+        button.innerText = button.innerText.toLowerCase();
+        button.disabled = false; // Réactiver les boutons au début
+        button.addEventListener('click', () => {
+            button.disabled = true;
+        });
+    });
+}
+
+// Fonction pour valider une lettre
 function valider(button) {
     const lettre = button.innerText;
     if (lettresUtilisees.includes(lettre)) return;
 
-    // La push()méthode des Arrayinstances ajoute les éléments spécifiés à la fin d'un tableau et renvoie la nouvelle longueur du tableau.
     lettresUtilisees.push(lettre);
     afficherLettresUtilisees();
 
@@ -82,6 +84,7 @@ function valider(button) {
 
         if (!motAffiche.includes("_")) {
             document.querySelector(".motTrouver").innerText = `Félicitations, vous avez trouvé le mot : ${motADeviner}`;
+            document.querySelector(".btnRejouer").disabled = false; // Activer le bouton "REJOUER"
         }
     } else {
         erreurs++;
@@ -91,10 +94,29 @@ function valider(button) {
 
         if (erreurs === maxErreurs) {
             document.querySelector(".motTrouver").innerText = `Désolé, vous avez perdu ! Le mot était : ${motADeviner}`;
+            document.querySelector(".btnRejouer").disabled = false; // Activer le bouton "REJOUER"
         }
     }
 }
 
+// Fonction pour réinitialiser le jeu
+function resetGame() {
+    motADeviner = "";
+    motAffiche = [];
+    erreurs = 0;
+    lettresUtilisees.length = 0;
+    document.querySelector(".utiliser").innerHTML = "";
+    document.querySelector(".motTrouver").innerHTML = "";
+    document.querySelector(".imagePendu").innerHTML = "";
+    document.querySelector(".btnRejouer").disabled = true; // Désactiver le bouton "REJOUER"
+    choisirMot();
+    initializeButtons();
+}
+
+// Initialisation du jeu au chargement de la page
 window.onload = () => {
     choisirMot();
+    initializeButtons();
+    document.querySelector(".btnRejouer").disabled = true; // Désactiver le bouton "REJOUER"
+    document.querySelector(".btnRejouer").addEventListener("click", resetGame);
 };
