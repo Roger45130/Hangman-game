@@ -28,7 +28,7 @@ const mots = [
     "désinfecterons", "aguerrissement", "renforceraient", "brigandassions", "dévalorisation",
     "désinculperiez", "brocanteraient", "déharnacheront", "démaigriraient", "dépoudrassions",
     "essoucheraient", "embarrasseriez", "bondonneraient", "réunifiassions", "transplantasse",
-    "hyperémotivité", "effaroucherais", "empoisonneuses", "tambourinerait", "bourlinguerons"
+    "hyperémotivité", "effaroucherais", "empoisonneuses", "tambourinerait", "bourlinguerons",
 ];
 
 let motADeviner = "";
