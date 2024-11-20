@@ -151,7 +151,7 @@ header {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 2px solid black;
 }
 
 .bienPlacer {
